@@ -1,4 +1,4 @@
-# Strapi Starter Blog
+# Strapi Starter Blog (Updated)
 
 Strapi starter for creating a blog with Strapi.
 
