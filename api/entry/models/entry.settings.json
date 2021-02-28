@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entries",
+  "info": {
+    "name": "Entry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Entry_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 1
+    },
+    "Color": {
+      "type": "string"
+    },
+    "Highlight_Color": {
+      "type": "string"
+    },
+    "Importance": {
+      "type": "string"
+    },
+    "Priority": {
+      "type": "string"
+    },
+    "Entry": {
+      "type": "richtext",
+      "minLength": 1,
+      "maxLength": 10000
+    },
+    "Entry_Text": {
+      "type": "text",
+      "required": false
+    },
+    "note": {
+      "via": "entries",
+      "model": "note"
+    }
+  }
+}

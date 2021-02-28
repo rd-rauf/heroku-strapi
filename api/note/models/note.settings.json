@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "name": "Note"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Note_Name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "entries": {
+      "collection": "entry",
+      "via": "note"
+    },
+    "note_category": {
+      "model": "note-category",
+      "via": "notes"
+    }
+  }
+}

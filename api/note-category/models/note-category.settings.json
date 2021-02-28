@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_categories",
+  "info": {
+    "name": "Note_Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Note_Category_Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "notes": {
+      "via": "note_category",
+      "collection": "note"
+    }
+  }
+}
